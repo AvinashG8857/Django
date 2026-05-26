@@ -33,5 +33,15 @@ def register(request):
             return redirect('login')
     return render(request,"register.html",{'form':form})
 
-def update_task(request):
+def update_task(request,id):
+    task= Task.objects.get(id=id)
+    if request.method == "POST":
+        task.title= request.POST.get('title')
+        task.due_date= request.POST.get("due_date")
+        task.completed= request.POST.get("completed") == 'on'
+        task.save()
+        return redirect('task_list')
+    return render(request,'update_task.html',{'task':task})
+
+def delete_task(request,id):
     pass
