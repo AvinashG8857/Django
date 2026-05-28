@@ -1,5 +1,18 @@
 A simple and modern Task Management Web Application built using Django and Bootstrap.
 
+Login
+![alt text](image.png)
+
+
+user registration
+![alt text](image-1.png)
+
+
+
+adding task 
+![alt text](image-2.png)
+
+
 FEATURES
 
 User Registration and Login
@@ -40,7 +53,7 @@ INSTALLATION
 
 Clone the repository
 
-git clone https://github.com/AvinashG8857/Django/tree/2a9fe6fe94b7f4c8e1d585cb6d88b19eef970c13/imageuploader
+git clone https://github.com/AvinashG8857/Django/tree/8efa0a4db9b75c70ad87fc3d26e877bc8c6264ee/Todo%20app%20website
 cd todo-app
 
 Create virtual environment
