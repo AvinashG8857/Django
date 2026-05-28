@@ -1,4 +1,7 @@
+![alt text](image.png)
+
 Django Image Uploader
+
 
 A simple and clean image upload and gallery web application built with Django and Bootstrap 5. Users can upload images and view them in a responsive gallery layout.
 
@@ -75,4 +78,3 @@ http://127.0.0.1:8000/
 
 -----------------------------------------------------
 
-![alt text](image.png)
