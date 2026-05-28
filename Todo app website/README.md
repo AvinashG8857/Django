@@ -40,7 +40,7 @@ INSTALLATION
 
 Clone the repository
 
-git clone https://github.com/yourusername/todo-app.git
+git clone https://github.com/AvinashG8857/Django/tree/2a9fe6fe94b7f4c8e1d585cb6d88b19eef970c13/imageuploader
 cd todo-app
 
 Create virtual environment
