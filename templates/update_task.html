@@ -1,39 +1,49 @@
 {% extends "base.html" %}
+{% block title %}Update Task{% endblock %}
+
 {% block content %}
+<div class="col-md-6 mx-auto">
+  <div class="content-card">
 
-<div class="card mina-card p-4 bg-white col-md-6 mx-auto">
-    <h4 class="fw-cold b-4 text-center">Update Task</h4>
-    <form action="" method="post">
-        {% csrf_token %}
+    <h3 class="text-center fw-bold mb-4">Update Task ✏</h3>
 
-        <div class="mb-3">
-            <label class="form-label fw-semibold">Task Title</label>
-            <input type="text" name="title" value="{{ task.title|slice:':5' }}" class="from-control" placeholder="ENTER your task title" required>
-        </div>
-        <div class="mb-4">
-            <label class="form-label fw-semibold">Due Date</label>
-            <input type="date" name="due_date" value="{{task.due_date|date:'Y-m-d'}}" class="from-control" required>
-        </div>
-        <div class="mb-4 form-check">
-            <input type="checkbox" name= completed class="form-check-input" id="completedCheck"
-            {% if task.completed %}checked{% endif %}>
-            <label class="form-check-label fw-semibold" for="completedCheck">Mark as completed</label>
+    <form method="post">
+      {% csrf_token %}
 
-        </div>
+      <!-- Title -->
+      <div class="mb-3">
+        <label class="form-label fw-semibold">Task Title</label>
+        <input type="text" name="title" value="{{ task.title }}" class="form-control" required>
+      </div>
 
-        <div class="d-flax justify-content-between">
-            <a href="{% url 'task_list' %}" class="btn btn-outline-secondary btn-custom">
-                Back
-            </a>
+      <!-- Date -->
+      <div class="mb-3">
+        <label class="form-label fw-semibold">Due Date</label>
+        <input type="date" name="due_date" value="{{ task.due_date|date:'Y-m-d' }}" class="form-control" required>
+      </div>
 
-            <button type="submit" class="btn btn-primary btn-custom">
-                Update Task
-            </button>
+      <!-- Completed -->
+      <div class="form-check mb-4">
+        <input type="checkbox" name="completed" class="form-check-input"
+        {% if task.completed %}checked{% endif %}>
+        
+        <label class="form-check-label fw-semibold">
+          Mark as completed
+        </label>
+      </div>
 
-        </div>
+      <!-- Buttons -->
+      <div class="d-flex justify-content-between">
+        <a href="{% url 'task_list' %}" class="btn btn-outline-secondary">
+          ← Back
+        </a>
+
+        <button type="submit" class="btn btn-success">
+          ✔ Update
+        </button>
+      </div>
+
     </form>
-
+  </div>
 </div>
-
-
 {% endblock %}
