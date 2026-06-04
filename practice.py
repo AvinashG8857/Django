@@ -1,4 +1,134 @@
-#finding largeest number in an array
+# question=""""
+#         Arrays & Lists (1–20)
+
+# Find the largest element in an array
+# Find the smallest element
+# Reverse an array
+# Find sum of all elements
+# Find average of array
+# Check if array is sorted
+# Remove duplicates from array
+# Find second largest element
+# Count occurrences of an element
+# Move all zeros to the end
+# Find missing number in range 1–n
+# Merge two sorted arrays
+# Find the intersection of two arrays
+# Rotate array by k steps
+# Find duplicates in array
+# Kadane’s Algorithm (max subarray sum)
+# Find pair with given sum
+# Find majority element (n/2 times)
+# Rearrange positive and negative numbers
+# Find longest increasing subarray
+
+
+# 🔤 Strings (21–40)
+
+# Reverse a string
+# Check palindrome
+# Count vowels and consonants
+# Remove vowels from string
+# Check anagram
+# Count character frequency
+# First non-repeating character
+# Remove duplicates from string
+# Convert string to integer (atoi)
+# Check substring existence
+# Longest common prefix
+# Check rotation of string
+# Capitalize first letter of each word
+# Replace spaces with %20
+# Count words in sentence
+# Longest substring without repeat characters
+# Validate palindrome ignoring symbols
+# Compress string (aab → a2b1)
+# Check balanced parentheses
+# Find all permutations of string
+
+
+# 🔁 Recursion (41–50)
+
+# Factorial using recursion
+# Fibonacci sequence
+# Power of number (x^n)
+# Sum of digits
+# Reverse a string recursively
+# Check palindrome recursively
+# Find GCD using recursion
+# Tower of Hanoi
+# Generate all subsets
+# Generate all permutations
+
+
+# 📚 Stack & Queue (51–65)
+
+# Implement stack using list
+# Implement queue using list
+# Valid parentheses
+# Next greater element
+# Reverse a stack
+# Sort a stack
+# Implement circular queue
+# Evaluate postfix expression
+# Min stack (retrieve min in O(1))
+# First non-repeating character in stream
+# Implement stack using queues
+# Implement queue using stacks
+# Sliding window maximum
+# Check redundant brackets
+# Largest rectangle in histogram
+
+
+# 🔗 Linked Lists (66–80)
+
+# Create a singly linked list
+# Reverse linked list
+# Detect loop in linked list
+# Find middle of linked list
+# Remove nth node from end
+# Merge two sorted linked lists
+# Check palindrome linked list
+# Remove duplicates from sorted list
+# Find intersection point of two lists
+# Detect and remove loop
+# Reverse linked list in groups of k
+# Add two numbers using linked list
+# Flatten a linked list
+# Sort linked list (merge sort)
+# Clone linked list with random pointers
+
+
+# 🌳 Trees (81–90)
+
+# Implement binary tree
+# Inorder traversal
+# Preorder traversal
+# Postorder traversal
+# Level order traversal
+# Find height of tree
+# Count nodes in tree
+# Check if BST
+# Lowest Common Ancestor
+# Diameter of tree
+
+
+# 🔍 Searching & Sorting (91–100)
+
+# Binary search
+# Linear search
+# Bubble sort
+# Selection sort
+# Insertion sort
+# Merge sort
+# Quick sort
+# Find kth smallest element
+# Search in rotated sorted array
+# Find peak element
+# """
+
+
+##finding largeest number in an array
 
 # arr= [3,2,6,7,7,2,8,1,5]
 
@@ -96,6 +226,26 @@
 
 # print(merge_unsorted_array(unsorted_arr1,unsorted_arr2))
 ########================================================================================================================================================================================================
+#### find the intersection of two arrays
+arr1= [1,2,3,5]
+arr2= [1,5,7,8]
+
+### def intersection(arr1, arr2):
+# ##    return 
+
+# ###print(intersection(arr1,arr2))
+
+def intersection(arr1, arr2):
+    from collections import Counter
+    count= Counter(arr1)
+    result=[]                                                                                                       #need to understand this 
+    for num in arr2:
+        if count[num]>0:
+            result.append(num)
+            count[num] -= 1
+    return result
+
+print(intersection(arr1,arr2))
 
 ########================================================================================================================================================================================================
 
